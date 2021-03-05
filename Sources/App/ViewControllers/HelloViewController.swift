@@ -5,7 +5,9 @@ class HelloViewController: ViewController {
         P("Hello page")
             .textAlign(.center)
             .body {
-                Button("go back").display(.block)
+                Button("go back").display(.block).onClick {
+                    History.back()
+                }
             }
     }
 }
