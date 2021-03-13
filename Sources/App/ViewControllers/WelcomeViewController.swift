@@ -47,3 +47,20 @@ class WelcomeViewController: ViewController {
         metaDescription = "An awesome Swift in heart of your website"
     }
 }
+
+/// Live preview works only in Visual Studio Code
+/// To make it work do the following:
+/// - install VSCode
+/// - install `webber` extension
+class Welcome_Preview: WebPreview {
+    override class var title: String { "Initial page" } // optional
+    override class var width: UInt { 640 } // optional
+    override class var height: UInt { 480 } // optional
+
+    @Preview override class var content: Preview.Content {
+        // add styles if needed
+        AppStyles.id(.happyStyle)
+        // add here as many elements as needed
+        WelcomeViewController()
+    }
+}

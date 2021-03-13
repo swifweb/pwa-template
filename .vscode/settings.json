@@ -1,0 +1,14 @@
+{
+	"files.exclude": {
+		".webber/*.json": true,
+		".webber/dev": true,
+		".webber/node_modules": true,
+		".webber/release": true,
+		"*.xc*": true,
+		"*.xco*": true,
+		"**/.build": true,
+		"**/.swiftpm": true,
+		"Package.resolved": true
+	},
+	"sde.buildOnSave": false
+}
