@@ -56,7 +56,7 @@
 					"storage.type.enum.swift"
 				],
 				"settings": {
-					"foreground": "#B2ED5D",
+					"foreground": "#c2f37e",
 					"fontStyle": ""
 				}
 			},
@@ -83,7 +83,7 @@
 					"string source"
 				],
 				"settings": {
-					"foreground": "#B49CDA",
+					"foreground": "#cbb7eb",
 					"fontStyle": ""
 				}
 			},
@@ -94,7 +94,7 @@
 					"support.function"
 				],
 				"settings": {
-					"foreground": "#D98339",
+					"foreground": "#e69a58",
 					"fontStyle": ""
 				}
 			},
@@ -113,7 +113,7 @@
 				"name": ":String, :Int",
 				"scope": "support.type",
 				"settings": {
-					"foreground": "#6E9CBE",
+					"foreground": "#84afcf",
 					"fontStyle": ""
 				}
 			},
@@ -121,7 +121,7 @@
 				"name": "import Library",
 				"scope": "meta.definition.type.class.swift",
 				"settings": {
-					"foreground": "#E16D5B",
+					"foreground": "#e08273",
 					"fontStyle": ""
 				}
 			},
@@ -151,7 +151,7 @@
 					"entity.name.function.swift"
 				],
 				"settings": {
-					"foreground": "#41A1C0",
+					"foreground": "#71bdd6",
 					"fontStyle": ""
 				}
 			},
@@ -163,7 +163,7 @@
 					"storage.type.class.swift"
 				],
 				"settings": {
-					"foreground": "#aaec30",
+					"foreground": "#cafc6f",
 					"fontStyle": ""
 				}
 			},
