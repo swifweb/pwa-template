@@ -28,7 +28,7 @@
 	"workbench.editor.showIcons": true,
 	"workbench.editor.tabCloseButton": "left",
 	"workbench.colorCustomizations": {
-		"editor.background": "#001620",
+		"editor.background": "#1e2427",
 		"editor.selectionBackground": "#635F69",
 		"editor.lineHighlightBackground": "#192833",
 		"editorCursor.foreground": "#FFFFFF"
