@@ -12,10 +12,9 @@ class NotFoundViewController: ViewController {
     }
 }
 
-/// Live preview works only in Visual Studio Code
-/// To make it work do the following:
-/// - install VSCode
-/// - install `webber` extension
+/// Live preview works in both XCode and VSCode
+/// To make it work in XCode install the `XLivePreview` app
+/// To make it work in VSCode install `webber` extension
 class NotFound_Preview: WebPreview {
     override class var title: String { "Not found endpoint" } // optional
     override class var width: UInt { 200 } // optional

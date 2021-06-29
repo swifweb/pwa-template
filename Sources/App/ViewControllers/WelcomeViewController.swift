@@ -48,10 +48,9 @@ class WelcomeViewController: ViewController {
     }
 }
 
-/// Live preview works only in Visual Studio Code
-/// To make it work do the following:
-/// - install VSCode
-/// - install `webber` extension
+/// Live preview works in both XCode and VSCode
+/// To make it work in XCode install the `XLivePreview` app
+/// To make it work in VSCode install `webber` extension
 class Welcome_Preview: WebPreview {
     override class var title: String { "Initial page" } // optional
     override class var width: UInt { 640 } // optional
