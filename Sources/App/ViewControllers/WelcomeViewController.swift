@@ -38,7 +38,7 @@ class WelcomeViewController: ViewController {
         .position(.fixed)
         .width(100.percent)
         .height(100.percent)
-        .background(.linearGradient(180, .black/70, .gray))
+        .background(.linearGradient(angle: -30, .red/20, .green/80, .red))
     }
 
     override func buildUI() {
