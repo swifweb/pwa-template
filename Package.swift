@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.7
 
 import PackageDescription
 
@@ -12,7 +12,7 @@ let package = Package(
         .executable(name: "Service", targets: ["Service"])
     ],
     dependencies: [
-        .package(url: "https://github.com/swifweb/web", from: "1.0.0-beta.1.0.0")
+        .package(url: "https://github.com/swifweb/web", from: "1.0.0-beta.1.19.0")
     ],
     targets: [
         .target(name: "App", dependencies: [
