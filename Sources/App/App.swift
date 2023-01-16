@@ -9,7 +9,7 @@ public class App: WebApp {
     
     @State var theme: Theme = .happy
     
-    @AppBuilder public override var body: AppBuilder.Content {
+    @AppBuilder public override var app: AppBuilder.Content {
         Lifecycle.didFinishLaunching {
             Navigator.shared.serviceWorker?.register("./service.js")
             print("Lifecycle.didFinishLaunching")
