@@ -1,31 +1,38 @@
 import Web
+import FetchAPI
 
-class WelcomeViewController: ViewController {
-    @State var clickCount = 0
-    @State var clicked = false
+class IndexPage: ViewController {
+    @State var firstTodoTitle = "n/a"
     
     @DOM override var body: DOM.Content {
         Header {
             Div {
-                H1(self.$clickCount.map { "Hello world PWA app, clicks: \($0)" })
-                    .color(self.$clicked.map { $0 ? .red : .white })
-                    .textAlign(.center)
-                    .fontFamily(.app)
+				H1("First Todo Title")
                 Br()
-                H4("Now you can run the world using Swift")
-                    .color(.white)
-                    .textAlign(.center)
-                    .fontFamily(.system, .appleSystem, .sanFrancisco, .roboto, .segoeUI, .helveticaNeue, .lucidaGrande, .sansSerif)
-                Button("click").onClick {
-                    self.clicked = !self.clicked
-                    self.clickCount += 1
-                }
-                Button("go to hello").onClick {
-                    History.pushState(path: "hello")
-                }
-                Button("toggle style").onClick {
-                    App.current.theme = App.current.theme == .happy ? .sad : .happy
-                }
+                H2(self.$firstTodoTitle)
+                Br()
+				Button("Load First Todo Title").onClick {
+					Fetch("https://jsonplaceholder.typicode.com/todos/1") {
+						switch $0 {
+						case .failure:
+							break
+						case .success(let response):
+							struct Todo: Decodable {
+								let id, userId: Int
+								let title: String
+								let completed: Bool
+							}
+							response.json(as: Todo.self) {
+								switch $0 {
+								case .failure(let error):
+									self.firstTodoTitle = "some error occured: \(error)"
+								case .success(let todo):
+									self.firstTodoTitle = todo.title
+								}
+							}
+						}
+					}
+				}
             }
             .position(.absolute)
             .display(.block)
@@ -43,8 +50,8 @@ class WelcomeViewController: ViewController {
 
     override func buildUI() {
         super.buildUI()
-        title = "PWA Hello world"
-        metaDescription = "An awesome Swift in heart of your website"
+		title = "Fetch example"
+		metaDescription = "An awesome Swift in heart of your website"
     }
 }
 
@@ -60,6 +67,6 @@ class Welcome_Preview: WebPreview {
         // add styles if needed
         AppStyles.id(.happyStyle)
         // add here as many elements as needed
-        WelcomeViewController()
+        IndexPage()
     }
 }

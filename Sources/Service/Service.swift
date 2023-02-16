@@ -1,5 +1,6 @@
 import ServiceWorker
 
+@main
 public class Service: ServiceWorker {
     @ServiceBuilder public override var body: ServiceBuilder.Content {
         Manifest

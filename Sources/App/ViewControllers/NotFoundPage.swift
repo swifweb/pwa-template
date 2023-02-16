@@ -1,6 +1,6 @@
 import Web
 
-class NotFoundViewController: ViewController {
+class NotFoundPage: ViewController {
     @DOM override var body: DOM.Content {
         P("this is catchall aka 404 NOT FOUND page")
             .textAlign(.center)
@@ -21,6 +21,6 @@ class NotFound_Preview: WebPreview {
     override class var height: UInt { 200 } // optional
 
     @Preview override class var content: Preview.Content {
-        NotFoundViewController()
+        NotFoundPage()
     }
 }
