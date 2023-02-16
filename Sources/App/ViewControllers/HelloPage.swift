@@ -17,11 +17,10 @@ class HelloPage: ViewController {
 /// To make it work in XCode install the `XLivePreview` app
 /// To make it work in VSCode install `webber` extension
 class Hello_Preview: WebPreview {
-    override class var title: String { "My hello preview" } // optional
-    override class var width: UInt { 400 } // optional
-    override class var height: UInt { 400 } // optional
-
     @Preview override class var content: Preview.Content {
+        Language.en
+        Title("My hello preview")
+        Size(400, 400)
         HelloPage()
     }
 }

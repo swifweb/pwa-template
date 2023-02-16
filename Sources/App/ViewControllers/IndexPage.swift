@@ -59,11 +59,10 @@ class IndexPage: ViewController {
 /// To make it work in XCode install the `XLivePreview` app
 /// To make it work in VSCode install `webber` extension
 class Welcome_Preview: WebPreview {
-    override class var title: String { "Initial page" } // optional
-    override class var width: UInt { 640 } // optional
-    override class var height: UInt { 480 } // optional
-
     @Preview override class var content: Preview.Content {
+        Language.en
+        Title("Initial page")
+        Size(640, 480)
         // add styles if needed
         AppStyles.id(.happyStyle)
         // add here as many elements as needed
