@@ -1,7 +1,7 @@
 import Web
 import FetchAPI
 
-class IndexPage: ViewController {
+class IndexPage: PageController {
     @State var firstTodoTitle = "n/a"
     
     @DOM override var body: DOM.Content {

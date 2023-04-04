@@ -1,6 +1,6 @@
 import Web
 
-class NotFoundPage: ViewController {
+class NotFoundPage: PageController {
     @DOM override var body: DOM.Content {
         P("this is catchall aka 404 NOT FOUND page")
             .textAlign(.center)

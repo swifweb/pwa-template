@@ -1,6 +1,6 @@
 import Web
 
-class HelloPage: ViewController {
+class HelloPage: PageController {
     @DOM override var body: DOM.Content {
         P("Hello page")
             .textAlign(.center)
